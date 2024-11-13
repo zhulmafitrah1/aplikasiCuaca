@@ -1,0 +1,185 @@
+/* Reset margin, padding, dan box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Header dan Footer */
+header, footer {
+    background: linear-gradient(90deg, #c47272, #462222); /* Gradient yang lebih cerah */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Navbar dengan efek cahaya maroon */
+.nav-penjelasan {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-penjelasan a {
+    color: rgb(246, 242, 242);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.nav-penjelasan a:hover {
+    background-color: #ecb0b0;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.6), 0 0 20px rgba(192, 115, 115, 0.497); /* Efek cahaya saat hover */
+}
+
+/* Background image */
+.background-image {
+    position: fixed; /* Ubah dari absolute ke fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/img/sunset.jpg');
+    z-index: -1;
+}
+
+/* Footer full sampai ke bawah */
+footer {
+    margin-top: auto;
+    padding: 40px 0; /* Padding lebih besar agar terasa penuh */
+    background-color: rgb(47, 4, 4);
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Konten utama */
+.main-content {
+    max-width: 90%; /* Mengatur lebar maksimal menjadi 90% dari layar */
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8); /* Transparansi untuk latar belakang */
+    background: linear-gradient(90deg, #713333, #462222);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(75, 35, 35, 0.2);
+    border-left: 5px solid rgb(26, 3, 3);
+    text-align: center;
+    position: relative;
+}
+
+.content-section p {
+    max-width: 100%; /* Membuat paragraf dalam konten utama lebih lebar */
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left; /* Menyesuaikan teks agar rata kiri */
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(245, 193, 193, 0.432), 0 0 60px rgba(0, 255, 255, 0.5); /* Cahaya di awal */
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+        box-shadow: 0 0 50px rgb(105, 189, 244), 0 0 100px rgba(0, 255, 255, 0.5); /* Memperbesar cahaya */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.5); /* Kembali ke ukuran awal */
+    }
+}
+
+h2 {
+    color: #8d7272;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(191, 62, 70, 0.24); /* Efek cahaya pada h2 */
+}
+
+.content-section {
+    line-height: 1.7;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section p:hover {
+    background: #9b485670;
+    border-color: #47494c;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: glow 1s infinite alternate; /* Animasi glow saat hover */
+}
+
+/* CSS untuk mengatur ukuran gambar */
+.image-section {
+    display: flex;
+    flex-direction: column; /* Mengatur arah flex menjadi kolom */
+    align-items: center; /* Memusatkan konten di tengah secara horizontal */
+    text-align: center; /* Memusatkan teks dalam container */
+    margin-top: 20px; /* Jarak ke atas, jika diperlukan */
+}
+
+.image-section h3 {
+    color: #FFFFFF; /* warna putih pada tulisan Diagram API */
+    font-size: 1.8em;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); /* Tambahkan efek bayangan jika diinginkan */
+    margin-bottom: 10px;
+}
+
+
+.diagram-img {
+    max-width: 50%; /* Atur ukuran maksimal gambar menjadi 50% */
+    height: auto; /* Menjaga rasio gambar */
+    border-radius: 8px; /* Tambahkan radius jika diperlukan */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan jika diperlukan */
+    margin-top: 20px; /* Tambahkan jarak di atas gambar */
+    margin-bottom: 20px; /* Tambahkan jarak di bawah gambar */
+}
+
+
+
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px gray, 0 0 20px rgba(162, 83, 83, 0.144);
+    }
+    to {
+        box-shadow: 0 0 30px gray, 0 0 50px rgba(215, 87, 87, 0.113);
+    }
+} 

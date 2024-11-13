@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{judul}}</title>
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/css/style-tentang.css">
+    <!-- Menghubungkan Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="main-content">
+        {{>header}}
+        <div class="profile-section">
+            <img src="/img/uul.jpg" alt="Foto Pengembang" class="profile-pic">
+            <h2>{{nama}}</h2>
+            <p>Mahasiswi Semester 5 Informatika di Universitas Negeri Padang</p>
+        </div>
+        <div class="about-section">
+            <h3>Tentang Saya</h3>
+            <p>Saya adalah seorang mahasiswi yang memiliki antusiasme dan dedikasi yang tinggi dalam bidang UI/UX dan
+                Front- End Development, dengan keterampilan dalam HTML, CSS, JavaScript, Php, dan Python.</p>
+        </div>
+        <div class="skills-section">
+            <h3>Keterampilan</h3>
+                 <ul>
+                    <li>Pengembangan Web (HTML, CSS, JavaScript, Node.js)</li>
+                    <li>Pemrograman Berorientasi Objek (Java, C++)</li>
+                    <li>Analisis Data (Python, Pandas, Statistik)</li>
+                    <li>Desain UI/UX (Figma)</li>
+                 </ul>
+        </div>
+        <div class="contact-section">
+            <h3>Kontak</h3>
+            <p>
+                <i class="fas fa-envelope"></i> 
+                Email: <a href="mailto:zhulmafitrah@gmail.com">zhulmafitrah@gmail.com</a>
+            </p>
+            <p>
+                <i class="fab fa-linkedin"></i> 
+                LinkedIn: <a href="https://www.linkedin.com/in/zulma-fitrah-1744922b4" target="_blank">linkedin.com/in/zulma-fitrah-1744922b4</a>
+            </p>
+            <p>
+                <i class="fab fa-github"></i> 
+                GitHub: <a href="https://github.com/zhulmafitrah1" target="_blank">github.com/zhulmafitrah1</a>
+            </p>
+        </div>
+        {{>footer}}
+        <script src="/js/app.js"></script>
+    </div>
+</body>
+</html>
